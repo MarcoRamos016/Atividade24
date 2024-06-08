@@ -1,0 +1,117 @@
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Atividades</title>
+    <link rel="stylesheet" href="gestaoAtividades.css">
+    <link rel="stylesheet" href="videoBackground.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="background">
+        <video muted autoplay loop>
+            <source src="/video/ProgrammingBackground.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <div id="navbar">
+        <ul>
+            <li>
+                <button>
+                <a href="/Index/principal.html">Inicio</a>
+            </button>
+            </li>
+            <li>
+                <button>
+                <a href="/Index/gestaoUsuarios.html">Gestão de Usuários</a>
+            </button>
+            </li>
+            <li>
+                <button>
+                <a href="/Index/index.html">Fazer login</a>
+            </button>
+            </li>
+        </ul>
+    </div>
+        
+    <div class="contform">
+        <form id="contform">
+            <li>
+                <label>Id:</label>
+                <br>
+                <input type="text" name="id" id="id"  required>
+            </li>
+            <li>
+                <label>Descrição:</label>
+                <br>
+                <input type="text" name="descrição" id="descricao"  required>
+            </li>
+            <li>
+                <label>Data de Entrega:</label>
+                <br>
+                <input type="text" name="Data de Entrega" id="dataentrega"  required>
+            </li>
+            <button id="confirm">SALVAR</button>
+        </form>
+    </div>
+    <div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Data de Entrega</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+    </div>
+
+<script>  document.addEventListener("DOMContentLoaded", function() {
+   
+    var tableBody = document.querySelector("#dataTable tbody");
+
+
+    for (var i = 0; i < localStorage.length; i++) {
+        
+        if (localStorage.key(i) == "produtos"){
+
+            var key = localStorage.key(i);
+            var value = JSON.parse(localStorage.getItem(key));
+
+            for(var j = 0; j <= value.length; j++){
+                
+                var objeto = value[j];
+
+                console.log(objeto);
+
+           
+                 var newRow = document.createElement("tr");
+    
+                 var id = document.createElement("td");
+                 var descricao = document.createElement("td");
+                 var dataentrega= document.createElement("td");
+        
+                 id.textContent = objeto.id;
+                 descricao.textContent = objeto.descricao;
+                 dataentrega.textContent = objeto.dataentrega;
+              
+       
+                 newRow.appendChild(id);
+                 newRow.appendChild(descricao);
+                 newRow.appendChild(dataentrega);
+                 
+    
+                 tableBody.appendChild(newRow);
+
+            } 
+        }
+    }
+});
+
+</script>
+    
+</body>
+<script src="/Index/gestaoatividades.js"></script>
+</html>

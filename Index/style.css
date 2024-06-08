@@ -1,0 +1,168 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+.contform{
+text-align: center;
+padding-top: 100px;
+
+}
+
+#navbar{
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#navbar button a{
+    color: white;
+    text-decoration: none;
+  
+}
+
+#navbar button:hover{
+    transform: scale(1.2);
+
+}
+#navbar button a:hover{
+    color: rgb(0, 255, 0);
+}
+
+#navbar button{
+    background: none;
+    margin: 0;
+    border: none;
+    transition: 500ms;
+    margin-right: 25px;
+}
+
+#navbar > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+#navbar a{
+color: white;
+list-style: none;
+text-decoration: none;
+font-size: 25px;
+
+}
+
+
+#navbar a::after {
+    content: " ";
+    width: 0px;
+    height: 3px;
+    background-image: linear-gradient(45deg, #2600ff, #1da766);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.7s;
+}
+
+#navbar a:hover::after {
+    width: 70px;
+
+}
+
+li{
+list-style: none;
+}
+input{
+    margin: 2px ;
+    font-size: 25px;
+    border: 3px solid black;
+    box-shadow: 20px 0px 80px 20px  black;
+    background-color: rgb(138, 132, 132);
+    border-radius: 8px;
+    
+}
+
+label{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-left: 490px;
+    margin-top: 20px;
+    display: flex;
+
+
+}
+
+#confirm{
+    margin-top: 25px;
+    border: none;
+    box-shadow: 20px 0px 80px 20px  black;
+    background-color: rgb(22, 22, 22);
+    border-radius: 10px;
+    color: white ;
+    font-weight: 800;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+#confirm:hover{
+    transform: scale(1.2);
+    color: rgb(49, 235, 49);
+}
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 5%;
+    
+}
+th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 300px;
+}
+th {
+    background-color: #00000080;
+    
+}
+
+td{
+padding-left: 300px;
+font-size: 20px;
+color: white;
+background-color: #34313130;
+border: 3px black solid;
+}
+
+#background{
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+}
+
+#background > video{
+width: 100%;
+height: 100%;
+position: fixed;
+z-index: -1;
+object-fit: cover;
+inset: 0;
+}
+
+#background > video::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    inset: 0;
+    position: fixed;
+z-index: -1;
+}

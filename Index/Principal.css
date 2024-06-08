@@ -1,0 +1,91 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+#navbar{
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#navbar > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+
+#navbar a::after {
+    content: " ";
+    width: 0px;
+    height: 3px;
+    background-image: linear-gradient(45deg, #2600ff, #1da766);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.7s;
+}
+
+#navbar a:hover::after {
+    width: 120px;
+
+}
+
+#navbar button{
+    border: none;
+background: none;
+transition: 500ms;
+font-size: 25px;
+margin-right: 25px;
+}
+
+#navbar button a{
+    color: white;
+    text-decoration: none;
+}
+
+#navbar button:hover{
+    transform: scale(1.2);
+
+}
+#navbar button a:hover{
+    color: rgb(0, 255, 0);
+}
+li{
+list-style: none;
+}
+
+
+
+#background{
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+}
+
+#background > video{
+width: 100%;
+height: 100%;
+position: fixed;
+z-index: -1;
+object-fit: cover;
+inset: 0;
+}
+
+#background > video::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    inset: 0;
+    position: fixed;
+z-index: -1;
+}

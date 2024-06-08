@@ -1,0 +1,73 @@
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Usuários</title>
+    <link rel="stylesheet" href="gestaoUsuarios.css">
+    <link rel="stylesheet" href="videoBackground.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="background">
+        <video muted autoplay loop>
+            <source src="/video/ProgrammingBackground.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+     
+    <div id="navbar">
+        <ul>
+            <li>
+                <button>
+                <a href="/Index/principal.html">Inicio</a>
+            </button>
+            </li>
+            <li>
+                <button>
+                <a href="/Index/gestaoAtividades.html">Gestão de Atividades</a>
+            </button>
+            </li>
+            <li>
+                <button>
+                <a href="/Index/index.html">Fazer login</a>
+            </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contform">
+        <form id="contform">
+            <li>
+                <label>Usuário:</label>
+                <br>
+                <input type="text" name="Usuário" id="usuario"  required>
+            </li>
+            <li>
+                <label>Senha:</label>
+                <br>
+                <input type="text" name="Senha" id="senha"  required>
+            </li>
+            <li>
+                <label>Confirmar Senha:</label>
+                <br>
+                <input type="text" name="Confirmar Senha" id="comfirmarSenha"  required>
+            </li>
+            <button id="confirm">SALVAR</button>
+        </form>
+    </div>
+    <div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Data de Entrega</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+    </div>
+
+</body>
+</html>

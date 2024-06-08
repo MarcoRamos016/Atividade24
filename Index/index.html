@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="videoBackground.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="background">
+        <video muted autoplay loop>
+            <source src="/video/ProgrammingBackground.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="navbar">
+        <ul class="navcontainer">
+            <li>
+                <button>
+                   <a href="/Index/principal.html">Inicio</a>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <a href="/Index/gestaoUsuarios.html">Gestão de Usuários</a>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <a href="/Index/gestaoAtividades.html">Gestão de Atividades</a>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contform">
+        <form id="contform">
+            <li>
+                <label>Usuário</label>
+                <br>
+                <input type="text" name="Usuário" id="usuario" required>
+            </li>
+            <li>
+                <label>Senha</label>
+                <br>
+                <input type="text" name="senha" id="senha"  required>
+            </li>
+            <button id="confirm">LOGIN</button>
+        </form>
+    </div>
+    <div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>usuario</th>
+                    <th>senha</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+    </div>
+
+</body>
+
+        
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      var tableBody = document.querySelector("#dataTable tbody");
+  
+  
+      for (var i = 0; i < localStorage.length; i++) {
+          
+          if (localStorage.key(i) == "produtos"){
+  
+              var key = localStorage.key(i);
+              var value = JSON.parse(localStorage.getItem(key));
+  
+              for(var j = 0; j <= value.length; j++){
+                  
+                  var objeto = value[j];
+  
+                  console.log(objeto);
+  
+                   var newRow = document.createElement("tr");
+
+                   var senha = document.createElement("td");
+                   var usuario = document.createElement("td");
+        
+                  
+                   usuario.textContent = objeto.usuario;
+                   senha.textContent = objeto.senha;
+                
+           
+                   newRow.appendChild(senha);
+                   newRow.appendChild(usuario);
+        
+           
+                   tableBody.appendChild(newRow);
+  
+              } 
+          }
+      }
+  });
+  
+      
+  </script>
+
+  <script src="script.js"></script>
+</html>
